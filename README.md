@@ -34,19 +34,6 @@ Imágenes utilizadas en la página web:
 2. **Abrir el archivo `index.html`**  
    Abre este archivo en tu navegador para visualizar la página principal.
 
-## Requisitos
-
-- Un navegador moderno compatible con HTML5, CSS3 y JavaScript.
-- Conexión a Internet si se usan recursos externos.
-
-## Capturas de Pantalla
-
-Asegúrate de añadir capturas de pantalla aquí si lo deseas.
-
 ## Autor
 
-Este proyecto ha sido desarrollado como ejemplo para un portafolio o para uso creativo.
-
----
-
-¡Explora y disfruta el sitio web!
+Este proyecto ha sido realizado por David Guzmán de la Cuadra para un proyecto de la asignatura "Lenguaje de marca"
