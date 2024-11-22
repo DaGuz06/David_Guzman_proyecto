@@ -34,6 +34,10 @@ Imágenes utilizadas en la página web:
 2. **Abrir el archivo `index.html`**  
    Abre este archivo en tu navegador para visualizar la página principal.
 
+## Mas recursos
+
+Puedes ver como se hizo la página en el siguiente enlace "https://youtu.be/Wv15tqJYCzE"
+
 ## Autor
 
 Este proyecto ha sido realizado por David Guzmán de la Cuadra para un proyecto de la asignatura "Lenguaje de marca"
