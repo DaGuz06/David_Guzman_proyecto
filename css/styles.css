@@ -1,0 +1,680 @@
+/* Importación de fuentes desde Google Fonts y otra fuente personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://db.onlinewebfonts.com/c/28d12f3a535c472cd0a39179aa1cd3ea?family=FoughtKnight+Regular");
+
+/* Reseteo de márgenes, padding y box-sizing para unificar estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 1; /* Define prioridad de apilamiento */
+}
+
+/* Estilo general del cuerpo del documento */
+body {
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    line-height: 1.6; /* Altura de línea */
+    color: white; /* Color de texto */
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.836), /* Degradado inicial */
+        rgba(8, 216, 136, 0) /* Transición al color base */
+    ), url("../photo/19993920_6315777312554.webp"); /* Imagen de fondo */
+    background-size: cover; /* Imagen cubre todo el fondo */
+    background-attachment: fixed; /* Imagen permanece fija al hacer scroll */
+}
+
+/* Encabezado del sitio */
+header {
+    display: flex; /* Diseño en flexbox */
+    justify-content: space-between; /* Distribuye elementos a los extremos */
+    align-items: center; /* Alinea elementos verticalmente */
+    padding: 1rem 2rem; /* Espaciado interno */
+    background-color: #ffffff; /* Fondo blanco */
+    border-bottom: 1px solid #ccc; /* Línea separadora */
+}
+
+/* Estilo del logo */
+.logo h1 {
+    font-family: "FoughtKnight Regular", Arial, Helvetica, sans-serif;
+    background: linear-gradient(90deg, #eff1ff, #333); /* Degradado en texto */
+    font-size: 2.5rem; /* Tamaño grande */
+    -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente */
+    -webkit-background-clip: text; /* Clip del fondo al texto */
+}
+
+/* Botón dentro del logo */
+.logo button {
+    background: none; /* Sin fondo */
+    border: 0; /* Sin borde */
+    color: inherit; /* Toma el color actual */
+    padding: 0; /* Sin espacio interno */
+    -webkit-user-select: none; /* Desactiva selección de texto */
+    -webkit-appearance: button; /* Apariencia de botón */
+}
+
+/* Enlaces del botón dentro del logo */
+.logo button a {
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Barra de navegación principal */
+nav {
+    display: flex; /* Diseño en flexbox */
+    align-items: center; /* Alinea los elementos verticalmente */
+}
+
+/* Lista de enlaces de navegación */
+.nav-links {
+    display: flex; /* Elementos en línea */
+    list-style: none; /* Sin viñetas */
+    font-family: Poppins, Arial, Helvetica, sans-serif; /* Fuente personalizada */
+}
+
+.nav-links li {
+    margin-left: 2rem; /* margen izquierdo */
+}
+
+/* Enlaces individuales */
+.nav-links a {
+    text-decoration: none; /* Sin subrayado */
+    color: #333; /* Color base */
+    font-size: 1rem; /* Tamaño del texto */
+}
+
+/* Efecto al pasar el mouse sobre los enlaces */
+.nav-links a:hover {
+    background-color: #ABAFB1; /* Fondo gris claro */
+    color: white; /* Texto blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 4px 1.8rem; /* margen interno */
+    transition: 0.3s ease; /* Transición suave */
+}
+
+/* Menú desplegable para dispositivos móviles */
+.mobile-menu {
+    display: none; /* Oculto por defecto */
+    flex-direction: column; /* Apila elementos */
+    background-color: #fff; /* Fondo blanco */
+    position: absolute; /* Posicionamiento relativo al padre */
+    top: 60px; /* Posición debajo del header */
+    right: 0; /* Pegado al borde derecho */
+    width: 100%; /* Ocupa todo el ancho */
+    border-top: 1px solid #ccc; /* Línea superior */
+    z-index: 2; /* Prioridad de apilamiento */
+}
+
+.mobile-menu ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+}
+
+/* Cada elemento del menú móvil */
+.mobile-menu ul li {
+    padding: 1rem; /* margen interno */
+    border-bottom: 1px solid #ccc; /* Separador */
+}
+
+/* Enlaces del menú móvil */
+.mobile-menu ul li a {
+    color: #333; /* Color base */
+    text-decoration: none; /* Sin subrayado */
+    font-family: Poppins, Arial, Helvetica, sans-serif; /* Fuente */
+}
+
+/* Icono del menú móvil */
+.menu-icon {
+    display: none; /* Oculto por defecto */
+    flex-direction: column; /* Apila barras */
+    cursor: pointer; /* Cursor de mano */
+}
+
+.menu-icon .menu-bar {
+    width: 25px; /* Ancho de la barra */
+    height: 3px; /* Altura de la barra */
+    background-color: #000000; /* Color negro */
+    margin: 3px 0; /* Separación entre barras */
+    border-radius: 2px; /* Bordes redondeados */
+}
+
+/* Media queries para ajustar diseño en dispositivos pequeños */
+@media (max-width: 768px) {
+    /* Esconde los enlaces de navegación */
+    .nav-links {
+        display: none;
+    }
+
+    /* Muestra el icono del menú móvil */
+    .menu-icon {
+        display: flex;
+    }
+
+    /* Ajusta el menú móvil al abrirse */
+    .mobile-menu.open {
+        display: flex;
+    }
+
+    .info {
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: center; /* Centra los elementos */
+    }
+    .ubi{
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: center; /* Centra los elementos */
+    }
+    .img-container {
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: center; /* Centra los elementos */    
+    }
+    .img-container #estudio1{
+        margin-top: 20px;
+        width: 10px;
+    }
+    .artistas-grid{
+        flex-direction: column; /* Coloca los elementos en columna */ /*No funciona*/
+        align-items: center; /* Centra los elementos */
+    }
+    .trabajamos{
+        flex-direction: column; /* Coloca los elementos en columna */ /*No funciona*/
+        align-items: center; /* Centra los elementos */
+    }
+    .musica{
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: center; /* Centra los elementos */
+    }
+    .musica iframe{
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .wrapper {
+        width: 40px;
+        height: auto;
+    }
+    .video{
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: center; /* Centra los elementos */
+    }
+    .video iframe{
+        width: 300px;
+    }
+
+}
+/* Contenedor principal */
+main {
+    padding: 2rem; /* margen interno */
+    text-align: left; /* Alineación del texto a la izquierda */
+    font-size: 120%; /* Tamaño del texto ligeramente más grande */
+}
+
+/* Separador visual en la página */
+#separador {
+    text-align: center; /* Texto centrado */
+    background-color: transparent; /* Fondo transparente */
+    padding: 10px; /* margen interno */
+    font-family: Poppins, Arial, Helvetica, sans-serif; /* Fuente personalizada */
+    font-size: 40px; /* Tamaño grande del texto */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Borde transparente con opacidad */
+    backdrop-filter: blur(20px); /* Efecto de desenfoque detrás del elemento */
+    margin: 0; /* Sin margen */
+    margin-top: 10px; /* margen superior */
+    margin-bottom: 5px; /* margen inferior */
+}
+
+/* Bloque móvil */
+.mobile {
+    display: none; /* Oculto por defecto */
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Texto centrado */
+    grid-template-rows: auto; /* Organización en filas automáticas */
+}
+
+/* Sección de información principal */
+.info {
+    margin-top: 5rem; /* Separación superior */
+    display: flex; /* Elementos en línea */
+    align-items: flex-start; /* Alinea elementos al inicio */
+    font-family: Arial, Helvetica, sans-serif; /* Fuente básica */
+}
+
+.info p {
+    flex: 1; /* Ocupa el espacio disponible */
+    margin-right: 20px; /* Espaciado derecho */
+}
+
+/* Lista de características dentro de la sección de información */
+.info #caracteristicas {
+    list-style-type: "- "; /* Viñetas personalizadas */
+    margin-left: 1.5rem; /* Margen izquierdo */
+    flex: 1; /* Ocupa espacio disponible */
+}
+
+/* Contenedor para imágenes */
+.img-container {
+    text-align: center; /* Centra las imágenes */
+    display: flex; /* Elementos en línea */
+    align-items: flex-start; /* Alinea al inicio */
+}
+
+/* Estilos de imágenes específicas */
+.info #estudio {
+    width: 280px; /* Ancho fijo */
+    height: auto; /* Altura automática */
+    margin-left: 15%; /* Margen izquierdo */
+    border-radius: 15px; /* Bordes redondeados */
+    align-items: center; /* Centrado de contenido */
+}
+
+.info #estudio1 {
+    width: 415px; /* Ancho fijo */
+    height: auto; /* Altura automática */
+    margin-left: 15%; /* Margen izquierdo */
+    border-radius: 15px; /* Bordes redondeados */
+    align-items: center; /* Centrado de contenido */
+    margin-right: 10px; /* Margen derecho */
+}
+
+/* Sección "¿Cómo trabajamos?" */
+.trabajamos {
+    display: flex; /* Elementos en línea */
+    gap: 180px; /* Espaciado entre elementos */
+    flex-direction: row; /* Dirección horizontal */
+    align-items: flex-start; /* Alineación superior */
+}
+
+.tituloTrabajamos {
+    width: 65%; /* Ancho proporcional */
+    margin-top: 40px; /* Separación superior */
+}
+
+.imgTrabajamos {
+    flex-grow: 1; /* Ocupa espacio disponible */
+    width: 50%; /* Ancho proporcional */
+}
+
+/* Imagen del equipo */
+#equipo {
+    width: 100%; /* Ancho completo */
+    border-radius: 5%; /* Bordes redondeados */
+    margin-top: 120px; /* Espaciado superior */
+}
+
+/* Sección de artistas */
+.artista {
+    display: grid; /* Organización en cuadrícula */
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    column-gap: 20px; /* Espaciado entre columnas */
+    align-items: center; /* Centrado vertical */
+    margin-top: 2rem; /* Separación superior */
+}
+
+.artista h3 {
+    font-size: 2rem; /* Tamaño del título */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.artista p {
+    font-size: 1rem; /* Tamaño del texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.artista img {
+    width: 25%; /* Ancho proporcional */
+    height: auto; /* Altura automática */
+    border-radius: 20% 5%; /* Bordes redondeados personalizados */
+    grid-column: 2; /* Imagen en la segunda columna */
+}
+
+/* Página de contacto */
+.ubi {
+    display: flex; /* Elementos en línea */
+    align-items: center; /* Centrado vertical */
+}
+
+.disponible {
+    display: inline-block; /* Elemento en línea con comportamiento de bloque */
+    margin-right: 10px; /* Espaciado derecho */
+}
+
+/* Estilo del iframe */
+iframe {
+    display: inline-block; /* Elemento en línea con comportamiento de bloque */
+    vertical-align: top; /* Alineado superior */
+    margin-right: 10px; /* Espaciado derecho */
+}
+
+/* Inputs del formulario */
+form input {
+    background-color: #8d8d8d; /* Fondo gris */
+    color: black; /* Texto negro */
+    font-family: Arial, Helvetica, sans-serif; /* Fuente básica */
+    display: inline-block; /* Elemento en línea con comportamiento de bloque */
+}
+
+/* Espaciado para párrafos en el formulario */
+.parrafo-form {
+    margin-top: 12px; /* Separación superior */
+}
+
+/* Estilos del footer */
+.bocadillo {
+    font-family: Poppins, Arial, Helvetica, sans-serif; /* Fuente personalizada */
+    font-size: 12px; /* Tamaño pequeño */
+    color: black; /* Texto negro */
+    position: fixed; /* Fijo en la pantalla */
+    bottom: 20px; /* Posición desde el borde inferior */
+    right: 20px; /* Posición desde el borde derecho */
+    background-color: #f0f0f0; /* Fondo claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    width: 200px; /* Ancho fijo */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    z-index: 1; /* Prioridad de apilamiento */
+    margin-bottom: 20px; /* Separación inferior */
+}
+
+.bocadillo::before {
+    content: ""; /* Triángulo decorativo */
+    position: absolute; /* Posicionamiento relativo al bocadillo */
+    bottom: -20px; /* Por debajo del elemento */
+    right: 30px; /* Ajuste derecho */
+    border-style: solid; /* Bordes sólidos */
+    border-width: 10px 10px 0; /* Triángulo orientado hacia arriba */
+    border-color: #f0f0f0 transparent transparent; /* Color del triángulo */
+}
+/* Estilos para el formulario dentro de un contenedor */
+.wrapper {
+    margin-top: 40px; /* Separación superior */
+    width: 420px; /* Ancho fijo */
+    background: transparent; /* Fondo transparente */
+    border: 2px solid rgba(255, 255, 255, .2); /* Borde con opacidad */
+    backdrop-filter: blur(20px); /* Efecto de desenfoque detrás */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2); /* Sombra suave */
+    color: #fff; /* Texto blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 30px 40px; /* Espaciado interno */
+}
+
+.wrapper h1 {
+    font-size: 36px; /* Tamaño del título */
+    text-align: center; /* Texto centrado */
+    font-family: Poppins, Arial, Helvetica, sans-serif; /* Fuente personalizada */
+}
+
+/* Caja de entrada de texto */
+.wrapper .input-box {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ocupa todo el ancho */
+    height: 50px; /* Altura fija */
+    margin: 30px 0; /* Espaciado vertical */
+}
+
+.input-box input {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background: transparent; /* Fondo transparente */
+    outline: none; /* Sin contorno */
+    border: 2px solid rgba(255, 255, 255, .2); /* Borde con opacidad */
+    border-radius: 40px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño del texto */
+    color: #fff; /* Texto blanco */
+    padding: 20px 45px 20px 20px; /* Espaciado interno */
+}
+
+/* Estilo para el texto placeholder */
+.input-box ::placeholder {
+    color: #fff; /* Color blanco */
+}
+
+/* Icono dentro del input */
+.input-box i {
+    position: absolute; /* Posicionamiento absoluto */
+    right: 20px; /* Alineado a la derecha */
+    top: 50%; /* Centrado vertical */
+    transform: translateY(-50%); /* Ajuste vertical */
+    font-size: 20px; /* Tamaño del icono */
+}
+
+/* Sección de opciones de suscripción */
+.recibir {
+    display: flex; /* Elementos en línea */
+    justify-content: space-between; /* Distribución equitativa */
+    font-size: 14.5px; /* Tamaño de fuente */
+    margin: -15px 0 15px; /* Ajuste de márgenes */
+}
+
+/* Botón principal */
+.wrapper .btn {
+    width: 100%; /* Ancho completo */
+    height: 45px; /* Altura fija */
+    background: #fff; /* Fondo blanco */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    border-radius: 40px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Sombra suave */
+    cursor: pointer; /* Cursor de mano */
+    font-size: 16px; /* Tamaño del texto */
+    color: black; /* Texto negro */
+}
+
+
+/* Imagen dentro de la sección */
+.trabajamos .imgTrabajamos {
+    width: 240px; /* Ancho fijo */
+    height: auto; /* Altura automática */
+}
+
+/* Elementos de lista con viñetas personalizadas */
+.trabajamos li {
+    list-style-type: "-"; /* Viñeta personalizada */
+}
+
+/* Sección de música */
+.musica {
+    display: flex; /* Elementos en línea */
+    gap: 110px; /* Espaciado entre elementos */
+    margin-top: 40px; /* Separación superior */
+    font-family: Poppins, Arial, Helvetica, sans-serif; /* Fuente personalizada */
+    font-size: 18px; /* Tamaño del texto */
+    margin-left: 15px; /* Separación izquierda */
+}
+
+/* Estilo para párrafos específicos */
+.p1, .p2, .p3, .p4 {
+    margin-top: 10px; /* Separación superior */
+}
+
+/* Estilo del scroll */
+::-webkit-scrollbar {
+    width: 13px; /* Ancho del scroll */
+}
+
+::-webkit-scrollbar-track {
+    background-color: white; /* Fondo del track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #B5B7B8; /* Color de la barra */
+    border-radius: 12px; /* Bordes redondeados */
+    border: 3px solid #f1f1f1; /* Borde exterior */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #8d8d8d; /* Color al pasar el cursor */
+}
+
+/* Página de servicios */
+
+/* Título de la sección */
+.titulo_tabla {
+    font-size: 2.5em; /* Tamaño del texto */
+    color: #8d8d8d; /* Color gris */
+    margin-bottom: 20px; /* Separación inferior */
+}
+
+/* Tabla general */
+table {
+    width: 90%; /* Ocupa el 90% del ancho del contenedor */
+    margin: 0 auto; /* Centrado horizontal */
+    border-collapse: separate; /* Bordes separados */
+    border-spacing: 0; /* Sin separación entre celdas */
+    border-radius: 12px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta desbordamientos */
+    background-color: #6f6f6f; /* Fondo de la tabla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Encabezado de la tabla */
+thead {
+    background-color: #4c4c4c; /* Fondo más oscuro */
+}
+
+.titulo_tabla {
+    text-align: center; /* Texto centrado */
+}
+
+thead th {
+    padding: 15px; /* Espaciado interno */
+    font-size: 1.2em; /* Tamaño del texto */
+    color: #ffffff; /* Texto blanco */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+/* Filas del cuerpo de la tabla */
+tbody tr {
+    background-color: #8d8d8dd2; /* Fondo gris claro */
+    transition: background-color 0.3s; /* Efecto suave al pasar el cursor */
+}
+
+tbody tr:hover {
+    background-color: #8d8d8d; /* Fondo diferente al pasar el cursor */
+
+}
+
+tbody td {
+    padding: 15px 20px; /* Espaciado interno */
+    text-align: left; /* Texto alineado a la izquierda */
+    font-size: 1em; /* Tamaño del texto */
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Bordes redondeados en las esquinas de la tabla */
+table tr:first-child th:first-child {
+    border-top-left-radius: 12px; /* Esquina superior izquierda */
+}
+
+table tr:first-child th:last-child {
+    border-top-right-radius: 12px; /* Esquina superior derecha */
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 12px; /* Esquina inferior izquierda */
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 12px; /* Esquina inferior derecha */
+}
+
+
+/*About*/
+.about_main {
+  padding: 40px 20px;
+  margin: 30px 0;
+}
+.about_main h2 {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.about_main p {
+    font-size: 0.7em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  .about_main li {
+    font-size: 0.7em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+.titulo_about {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+#valores {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Gris claro para el texto */
+}
+
+#equipoP {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Gris claro para el texto */
+  }
+
+#vision {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Gris claro para el texto */
+}
+
+#historia {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Gris claro para el texto */
+}
+
+/* Lista del equipo */
+.lista_about {
+  list-style-type: none;
+  padding: 0;
+}
+
+.lista_about li {
+  margin-bottom: 20px;
+}
+
+.lista_about li strong {
+  font-size: 1.3em;
+}
+
+.lista_about li em {
+  font-style: italic;
+  color: #b0b0b0;
+}
+
+/* Estilo de los valores */
+.lista_about li {
+  padding-left: 20px;
+}
+
+.lista_about li:before {
+  content: "•";
+  color: #ffffff;
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.lista_about li:last-child {
+  margin-bottom: 0;
+}
+
+/*video*/
+.video {
+  text-align: left;
+  margin-left: 70px;
+  margin-bottom: 30px   ;
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #e0e0e0; /* Gris claro para el texto */
+}
+
