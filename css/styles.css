@@ -678,3 +678,12 @@ table tr:last-child td:last-child {
   color: #e0e0e0; /* Gris claro para el texto */
 }
 
+
+/*Estilo Boton RSS*/
+#boton-imagen {
+    border: none; 
+    background: none; 
+    padding: 0 ;
+    margin-top: 15px; /* Espacio superior */
+  }
+  
