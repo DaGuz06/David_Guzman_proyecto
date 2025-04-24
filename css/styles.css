@@ -681,7 +681,7 @@ table tr:last-child td:last-child {
 
 /*Estilo Boton RSS*/
 #boton-imagen {
-    border: none; 
+    border: none white; 
     background: none; 
     padding: 0 ;
     margin-top: 15px; /* Espacio superior */
